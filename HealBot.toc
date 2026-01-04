@@ -1,0 +1,23 @@
+## Interface: 11200
+## Title: HealBot - El Séquito del Terror Edition
+## Notes: Panel modernizado con barras personalizables para sanación y decursive | Por DarckRovert (Elnazzareno)
+## Author: DarckRovert (Elnazzareno) - El Séquito del Terror
+## Version: 2.0
+## SavedVariables: HealBot_Config
+HealBot_Localization.es.lua
+HealBot_BonusScanner.lua
+HealBot_Data.lua
+HealBot_Errors.lua
+HealBot.lua
+HealBot_Action.lua
+HealBot_Options.lua
+HealBot_Commands.lua
+HealBot_LanguageSelector.lua
+HealBot_Error.xml
+HealBot.xml
+HealBot_Action.xml
+HealBot_Options.xml
+HealBot_FloatingButton.lua
+HealBot_FloatingButton.xml
+HealBot_CustomColors.lua
+HealBot_DarkTheme.lua

@@ -1,0 +1,119 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+  <!-- Botón Flotante de HealBot - Diseño Hermoso -->
+  <Button name="HealBot_FloatingButton" parent="UIParent" movable="true" enableMouse="true" hidden="false">
+    <Size>
+      <AbsDimension x="48" y="48"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER">
+        <Offset>
+          <AbsDimension x="0" y="200"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    
+    <!-- Fondo con marco circular -->
+    <Backdrop bgFile="Interface\\Tooltips\\UI-Tooltip-Background" edgeFile="Interface\\Tooltips\\UI-Tooltip-Border" tile="true">
+      <EdgeSize>
+        <AbsValue val="12"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="3" right="3" top="3" bottom="3"/>
+      </BackgroundInsets>
+    </Backdrop>
+    
+    <!-- Capas de texturas -->
+    <Layers>
+      <!-- Capa de fondo (sombra) -->
+      <Layer level="BACKGROUND">
+        <Texture name="$parent_Shadow" file="Interface\\Minimap\\MiniMap-TrackingBorder">
+          <Size>
+            <AbsDimension x="56" y="56"/>
+          </Size>
+          <Anchors>
+            <Anchor point="CENTER">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+          <Color r="0.0" g="0.0" b="0.0" a="0.5"/>
+        </Texture>
+      </Layer>
+      
+      <!-- Capa de arte (icono principal) -->
+      <Layer level="ARTWORK">
+        <Texture name="$parent_Icon" file="Interface\\Icons\\Spell_Shadow_Skull">
+          <Size>
+            <AbsDimension x="36" y="36"/>
+          </Size>
+          <Anchors>
+            <Anchor point="CENTER">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+      </Layer>
+      
+      <!-- Capa de brillo superior -->
+      <Layer level="OVERLAY">
+        <Texture name="$parent_Shine" file="Interface\\Minimap\\MiniMap-TrackingBorder">
+          <Size>
+            <AbsDimension x="52" y="52"/>
+          </Size>
+          <Anchors>
+            <Anchor point="CENTER">
+              <Offset>
+                <AbsDimension x="0" y="0"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+          <Color r="0.6" g="0.0" b="0.9" a="0.8"/>
+        </Texture>
+      </Layer>
+    </Layers>
+    
+    <!-- Textura de highlight al pasar el ratón -->
+    <HighlightTexture file="Interface\\Minimap\\MiniMap-TrackingBorder" alphaMode="ADD">
+      <Size>
+        <AbsDimension x="52" y="52"/>
+      </Size>
+      <Color r="1.0" g="0.5" b="1.0" a="0.6"/>
+    </HighlightTexture>
+    
+    <Scripts>
+      <OnLoad>
+        HealBot_FloatingButton_OnLoad(this);
+      </OnLoad>
+      <OnClick>
+        HealBot_FloatingButton_OnClick(this);
+      </OnClick>
+      <OnEnter>
+        HealBot_FloatingButton_OnEnter(this);
+      </OnEnter>
+      <OnLeave>
+        HealBot_FloatingButton_OnLeave(this);
+      </OnLeave>
+      <OnMouseDown>
+        HealBot_FloatingButton_OnMouseDown(this);
+      </OnMouseDown>
+      <OnMouseUp>
+        HealBot_FloatingButton_OnMouseUp(this);
+      </OnMouseUp>
+      <OnDragStart>
+        HealBot_FloatingButton_OnDragStart(this);
+      </OnDragStart>
+      <OnDragStop>
+        HealBot_FloatingButton_OnDragStop(this);
+      </OnDragStop>
+    </Scripts>
+  </Button>
+
+</Ui>
